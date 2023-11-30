@@ -1,0 +1,239 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* End Reset */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  padding: 30px;
+  background-color: #c5c9a4;
+}
+
+.main-container > p {
+  color: white;
+  background-color: #476a6f;
+  padding: 15px;
+  border-radius: 10px;
+  width: 60vw;
+  display: flex;
+  justify-content: center;
+  box-shadow: 10px 10px 5px grey;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-container > p {
+  font-size: 45px;
+}
+
+form {
+  margin-top: 50px;
+  display: grid;
+  grid-template: 2fr 2fr 2fr 2fr/ 4fr 4fr;
+  /* background-color: aqua; */
+  width: 40vw;
+  min-height: 45vh;
+  padding: 2rem;
+  gap: 40px;
+  border-radius: 15px;
+  background-color: #ecbeb4;
+  box-shadow: 10px 10px 5px grey;
+}
+
+form > div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+label {
+  font-size: 25px;
+}
+
+input {
+  height: 25px;
+  background-color: #fffff2;
+  border: solid 2px black;
+  border-radius: 10px;
+}
+
+.email-container {
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+.country-container {
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+.zip-container {
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+.pass-container {
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+.confirm-container {
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+.submit-container {
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+button {
+  min-height: 30px;
+  min-width: 80px;
+  justify-self: end;
+  align-self: center;
+  border: none;
+  background-color: #476a6f;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 10px;
+  padding: 5px;
+}
