@@ -8,26 +8,31 @@
 <body>
     <div class="main-container">
     <p>Enter your details</p>
-    <form>
+    <form novalidate>
         <div class="email-container">
-        <label for="email">Email:</label>
-        <input id="email" type="email">
+        <label for="email">Email</label>
+        <input id="email" type="email" required minlength="8">
+        <span class="error" aria-live="polite"></span>
         </div>
         <div class="country-container">
-        <label for="country">Country:</label>
-        <input id="country">
+        <label for="country">Country</label>
+        <select id="country" required></select>
+        <span class="error" aria-live="polite"></span>
         </div>
         <div class="zip-container">
-        <label for="zip">Zip:</label>
-        <input id="zip" type="text">
+        <label for="zip">Zip</label>
+        <input id="zip" type="text" required>
+        <span class="error" aria-live="polite"></span>
         </div>
         <div class="pass-container">
-        <label for="pass">Password:</label>
-        <input id="pass">
+        <label for="pass">Password</label>
+        <input id="pass" required minlength="8">
+        <span class="error" aria-live="polite"></span>
         </div>
         <div class="confirm-container">
-        <label for="confirm-pass">Confirm Password:</label>
-        <input id="confirm-pass">
+        <label for="confirm-pass">Confirm Password</label>
+        <input id="confirm-pass" required>
+        <span class="error" aria-live="polite"></span>
         </div>
         <button class="submit-container">Submit</button>
     </form>

@@ -138,18 +138,23 @@ body {
   height: 100vh;
   width: 100vw;
   padding: 30px;
-  background-color: #c5c9a4;
+  background: rgb(238, 174, 202);
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
 }
 
 .main-container > p {
-  color: white;
-  background-color: #476a6f;
+  color: black;
+  background-color: #dae3e5;
   padding: 15px;
   border-radius: 10px;
   width: 60vw;
   display: flex;
   justify-content: center;
-  box-shadow: 10px 10px 5px grey;
+  box-shadow: 5px 5px 5px grey;
 }
 
 .main-container {
@@ -173,8 +178,8 @@ form {
   padding: 2rem;
   gap: 40px;
   border-radius: 15px;
-  background-color: #ecbeb4;
-  box-shadow: 10px 10px 5px grey;
+  background-color: #dae3e5;
+  box-shadow: 5px 5px 5px grey;
 }
 
 form > div {
@@ -187,7 +192,8 @@ label {
   font-size: 25px;
 }
 
-input {
+input,
+select {
   height: 25px;
   background-color: #fffff2;
   border: solid 2px black;
@@ -230,10 +236,52 @@ button {
   justify-self: end;
   align-self: center;
   border: none;
-  background-color: #476a6f;
+  background-color: #ef8354;
   color: white;
   font-size: 20px;
   font-weight: bold;
   border-radius: 10px;
   padding: 5px;
+}
+
+input:invalid,
+select:invalid {
+  border-color: red;
+}
+
+input:focus:invalid,
+input:focus:valid,
+select:focus:invalid,
+select:focus:valid {
+  outline: none;
+}
+
+.email-container > label::before,
+.country-container > label::before,
+.zip-container > label::before,
+.pass-container > label::before,
+.confirm-container > label::before {
+  content: "*";
+  position: relative;
+  font-size: 18px;
+  right: 5px;
+  color: red;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.email-container > label::after,
+.country-container > label::after,
+.zip-container > label::after,
+.pass-container > label::after,
+.confirm-container > label::after {
+  content: "Required";
+  position: relative;
+  color: red;
+  left: 12px;
+  bottom: 2px;
+  font-size: 16px;
+  font-style: italic;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
